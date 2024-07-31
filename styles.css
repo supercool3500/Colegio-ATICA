@@ -53,8 +53,8 @@ p, li, ul {
 
 .main-nav .home {
     background-color: #7b002c;
-    margin-right: 4px;
-    margin-left: 4px;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
     width: 4vw;
     height: calc(--height-calc * 48vh / 12vw);
     position: absolute;
@@ -341,11 +341,21 @@ table>tfoot:not(:last-child) {
   .materias {
     display: initial;
   }
+
+  .sobre-nosotros {
+    margin-bottom: 26px;
+  }
+
   .plan-estudios, .sobre-nosotros {
     margin-left: 5px;
   }
+
+  .plan-estudios {
+    width: calc(95vw - 6px);
+  }
+
   .plan-estudios-p {
-     width: 100vw;
+    width: 100%;
     border-left: none;
     border-top: 3px solid #000;
     padding-top: 2px;
