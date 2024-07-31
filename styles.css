@@ -353,7 +353,8 @@ table>tfoot:not(:last-child) {
     width:80vw;
     height: 48vw;
   }
-  .sobre-nosotros {
-    margin-top: 25vh;
+  .slider img {
+    width: 80vw;
+    height: 48vw;
   }
 }
