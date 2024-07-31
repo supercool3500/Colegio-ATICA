@@ -348,7 +348,7 @@ table>tfoot:not(:last-child) {
     padding-left: 0;
    }
   .slider {
-    float: initial;
+    float: inline-start;
     width:80vw;
     height: 48vw;
   }
