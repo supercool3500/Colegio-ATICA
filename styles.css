@@ -16,12 +16,12 @@ a, abbr, acronym, address, big, cite, code {
     overflow: hidden;
 }
 
-h1 {
+h1, thead {
     color: #7b002c;
     font-size: 2vmax;
 }
 
-h1, h2, p, li, ul{
+h1, h2, p, li, ul, thead{
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -245,9 +245,17 @@ p, li, ul {
     display: flex;
 }
 
+.materias .materias-tablas {
+    display: inline-table;
+}
+
 .materias table {
     margin-right: 2vw;
-    width: 45vw;
+    width: 95%;
+}
+
+thead {
+    color: #7b002c;
 }
 
 #foot {
@@ -372,4 +380,11 @@ table>tfoot:not(:last-child) {
     height: 48vw;
     object-fit: cover;
   }
+}
+
+#foot-credits {
+    padding: 26px;
+    text-align: center;
+    color: #FFFCFA;
+    background-color: #393939;
 }
