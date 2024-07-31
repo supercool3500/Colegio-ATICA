@@ -339,6 +339,6 @@ table>tfoot:not(:last-child) {
     }
   }
 @media (max-width: 600px) {
-  .plan-estudios-p {
-    display: block
+  .materias {
+    display: initial;
 }
