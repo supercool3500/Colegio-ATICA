@@ -355,6 +355,8 @@ table>tfoot:not(:last-child) {
   }
   .slider img {
     width: 80vw;
+    max-width: 100vw;
     height: 48vw;
+    object-fit: cover;
   }
 }
