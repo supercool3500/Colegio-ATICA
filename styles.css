@@ -340,6 +340,7 @@ table>tfoot:not(:last-child) {
 @media (max-width: 600px) {
   .materias {
     display: initial;
+  }
   .plan-estudios-p {
      width: 100vw;
     border-left: none;
@@ -348,10 +349,8 @@ table>tfoot:not(:last-child) {
     padding-left: 0;
    }
   .slider {
-    float: inline-start;
+    float: none;
     width:80vw;
     height: 48vw;
   }
-  .sobre-nosotros {
-    float: inline-end;
 }
