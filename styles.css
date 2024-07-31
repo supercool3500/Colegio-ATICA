@@ -341,7 +341,7 @@ table>tfoot:not(:last-child) {
   .materias {
     display: initial;
   }
-  .plan-estudios {
+  .plan-estudios, .sobre-nosotros {
     margin-left: 5px;
   }
   .plan-estudios-p {
@@ -356,7 +356,7 @@ table>tfoot:not(:last-child) {
     width:80vw;
     height: 48vw;
   }
-  .slider img {
+  .slider .list img {
     width: 80vw;
     max-width: 100vw;
     height: 48vw;
