@@ -137,7 +137,7 @@ p, li, ul {
     border-radius: 30px;
     width: 50vw;
     max-width: 100vw;
-    height: 60vh;
+    height: 30vw;
     position: relative;
     overflow: hidden;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
@@ -154,7 +154,7 @@ p, li, ul {
 .slider .list img{
     width: 50vw;
     max-width: 100vw;
-    height: 60vh;
+    height: 30vw;
     object-fit: cover;
 }
 
@@ -338,3 +338,7 @@ table>tfoot:not(:last-child) {
       flex-direction: column;
     }
   }
+@media (max-width: 600px) {
+  .plan-estudios-p {
+    display: block
+}
