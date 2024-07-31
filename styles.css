@@ -243,7 +243,6 @@ p, li, ul {
 
 .materias {
     display: flex;
-    flex-grow: 1;
 }
 
 .materias table {
