@@ -389,3 +389,10 @@ table>tfoot:not(:last-child) {
     color: #FFFCFA;
     background-color: #393939;
 }
+
+#foot-credits img {
+    align-self: center;
+    margin-bottom: -1vw;
+    height: auto;
+    width: 20vw;
+}
