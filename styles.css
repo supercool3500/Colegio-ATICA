@@ -343,6 +343,8 @@ table>tfoot:not(:last-child) {
   .plan-estudios-p {
      width: 80vw;
     border-left: none;
-    border-top: 3px solid #000
+    border-top: 3px solid #000;
+    padding-top: 2px;
+    padding-left: 0;
    }
 }
