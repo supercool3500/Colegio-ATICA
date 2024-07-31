@@ -341,6 +341,9 @@ table>tfoot:not(:last-child) {
   .materias {
     display: initial;
   }
+  .plan-estudios {
+    margin-left: 5px;
+  }
   .plan-estudios-p {
      width: 100vw;
     border-left: none;
