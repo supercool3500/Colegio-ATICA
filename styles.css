@@ -350,6 +350,6 @@ table>tfoot:not(:last-child) {
   .slider {
     float: none;
     width:80vw;
-    height: 48;
+    height: 48vw;
   }
 }
