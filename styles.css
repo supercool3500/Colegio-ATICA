@@ -341,10 +341,15 @@ table>tfoot:not(:last-child) {
   .materias {
     display: initial;
   .plan-estudios-p {
-     width: 80vw;
+     width: 100vw;
     border-left: none;
     border-top: 3px solid #000;
     padding-top: 2px;
     padding-left: 0;
    }
+  .slider {
+    float: none;
+    width:80vw;
+    height: 48;
+  }
 }
