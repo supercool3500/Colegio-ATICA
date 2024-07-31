@@ -353,4 +353,7 @@ table>tfoot:not(:last-child) {
     width:80vw;
     height: 48vw;
   }
+  .sobre-nosotros {
+    float: inline-end;
+  }
 }
