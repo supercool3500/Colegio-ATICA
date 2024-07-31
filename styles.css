@@ -340,4 +340,9 @@ table>tfoot:not(:last-child) {
 @media (max-width: 600px) {
   .materias {
     display: initial;
+  .plan-estudios-p {
+     width: 80vw;
+    border-left: none;
+    border-top: 3px solid #000
+   }
 }
