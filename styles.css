@@ -95,8 +95,8 @@ p, li, ul {
     white-space: nowrap;
     }
 
-.main-nav li a span {
-    font-size: 1vw;
+.main-nav li span {
+    font-size: 0.8vw;
 }
 
 .main-nav li a:hover, .contactos:hover, .proyectos:hover {
@@ -120,6 +120,8 @@ p, li, ul {
     transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
     z-index: 2;
     overflow: hidden;
+    right: 0;
+    width: 300px;
 }
 
 .main-nav .submenu.show{
@@ -390,6 +392,10 @@ table>tfoot:not(:last-child) {
     }
   }
 @media (max-width: 600px) {
+    .main-nav .submenu {
+        width: 150px;
+    }
+
   .materias {
     display: initial;
   }
