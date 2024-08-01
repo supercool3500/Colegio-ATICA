@@ -29,6 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuItems = document.querySelectorAll('.materias-info li');
+    menuItems.forEach(item => {
+        if (item.querySelector('.submenu')) {
+            item.addEventListener('click', toggleMenu);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const theads = document.querySelectorAll('thead');
+
+    theads.forEach(thead => {
+        thead.addEventListener('click', () => {
+            const submenu = thead.nextElementSibling;
+            if (submenu.classList.contains('show')) {
+                submenu.classList.remove('show');
+            } else {
+                submenu.classList.add('show');
+            }
+        });
+    });
+});
+
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');

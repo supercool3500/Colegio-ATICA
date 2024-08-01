@@ -16,12 +16,12 @@ a, abbr, acronym, address, big, cite, code {
     overflow: hidden;
 }
 
-h1, thead {
+h1 {
     color: #7b002c;
     font-size: 2vmax;
 }
 
-h1, h2, p, li, ul, thead, h3, h4{
+h1, h2, p, li, ul, h3, h4{
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -67,25 +67,31 @@ p, li, ul {
     height: auto;
 }
 
-.main-nav ul, .plan-estudios-nav ul {
+.main-nav ul, .plan-estudios-nav ul, .materias-info ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         align-items: center;
     }
 
-.main-nav ul {
+.main-nav ul, .materias-info ul {
     display: flex;
 }
     
-.main-nav li {
+.main-nav li, .materias-info li {
     float: left;
     box-sizing: border-box;
-    width: 100%;
-    border-right: 1px solid black;
     cursor: pointer;
     }
+
+.main-nav li {
+    width: 100%;
+}
     
+.main-nav > ul > li {
+    border-right: 1px solid black;
+}
+
 .main-nav li a, .main-nav .submenu,.contactos, .proyectos {
     display: block;
     color: white;
@@ -254,19 +260,67 @@ p, li, ul {
 
 .materias {
     display: flex;
+    flex-direction: row;
 }
 
-.materias .materias-tablas {
-    display: inline-table;
+.materias .materias-info {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    flex: 1;
 }
 
-.materias table {
+.ciclo-basico, .ciclo-orientado  {
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    text-decoration: none;
+    background-color: #7b002c;
+    color: #FFF;
     margin-right: 2vw;
-    width: 95%;
+    border-radius: 10px;
+    overflow: visible;
 }
 
-thead {
+.materias-info li {
+    text-align: center;
+    margin: 0 auto;
+    padding: 18px;
+    width: 100%;
+}
+
+
+.materias-info > .ciclo-basico > ul > li, .materias-info > .ciclo-orientado > ul > li {
+    transition: background-color 0.3s ease-out;
+}
+
+.materias-info > .ciclo-basico > ul > li:hover, .materias-info > .ciclo-orientado > ul > li:hover {
+    background-color: #FFF;
     color: #7b002c;
+}
+
+.materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu {
+    margin: 0px 15px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    opacity: 0;
+    position: absolute;
+    background-color: #333;
+    color: #FFF;
+    max-height: 0px;
+    transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.materias-info .ciclo-basico ul li ul.submenu li, .materias-info .ciclo-orientado ul li ul.submenu li {
+    border-bottom: 2px solid #111;
+}
+
+.materias-info .ciclo-basico ul li ul.submenu.show, .materias-info .ciclo-orientado ul li ul.submenu.show {
+    max-height: 800px;
+    opacity: 1;
 }
 
 #foot {
@@ -294,47 +348,6 @@ thead {
     text-align: center;
 }
 
-table {
-    background-color: lightblue;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 10px;
-    border: 2px solid darkcyan;
-    line-height: 30px;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-}
-
-table tr {
-    height: 10vh;
-}
-
-table th, td {
-    padding: 4px;
-}
-
-/* Apply a border to the right of all but the last column */
-table th:not(:last-child),
-table td:not(:last-child) {
- border-right: 2px solid darkcyan ;
-}
-/* Apply a border to the bottom of all but the last row */
-table>thead>tr:not(:last-child)>th,
-table>thead>tr:not(:last-child)>td,
-table>tbody>tr:not(:last-child)>th,
-table>tbody>tr:not(:last-child)>td,
-table>tfoot>tr:not(:last-child)>th,
-table>tfoot>tr:not(:last-child)>td,
-table>tr:not(:last-child)>td,
-table>tr:not(:last-child)>th,
-table>thead:not(:last-child),
-table>tbody:not(:last-child),
-table>tfoot:not(:last-child) {
- border-bottom: 3px solid darkcyan;
-}
-
 .linea-negra {
     height: 2px;
     background-color: #000;
@@ -343,7 +356,7 @@ table>tfoot:not(:last-child) {
 }
 
 .descripcion {
-    width: 45vw;
+    flex: 1;
     display: inline-table;
     margin-right: 2vw; 
     border-left: 3px solid #000; 
@@ -351,17 +364,13 @@ table>tfoot:not(:last-child) {
     margin-bottom: 20px;
 }
 
-.descripcion .intro, .descripcion .ciclo-orientado, .descripcion .ciclo-basico {
+.descripcion .intro {
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .descripcion .intro {
     float:none;
-}
-
-.descripcion .ciclo-orientado, .descripcion .ciclo-basico {
-    float: inline-start;
 }
 
 .descripcion h2, h3, h4 {
