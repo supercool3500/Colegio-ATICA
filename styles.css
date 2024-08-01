@@ -120,8 +120,11 @@ p, li, ul {
     transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
     z-index: 2;
     overflow: hidden;
-    right: 0;
     width: 300px;
+}
+
+.main-nav .contactos .submenu {
+    right: 10px;
 }
 
 .main-nav .submenu.show{
