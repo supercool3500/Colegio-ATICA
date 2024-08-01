@@ -21,7 +21,7 @@ h1, thead {
     font-size: 2vmax;
 }
 
-h1, h2, p, li, ul, thead{
+h1, h2, p, li, ul, thead, h3, h4{
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -83,6 +83,7 @@ p, li, ul {
     box-sizing: border-box;
     width: 100%;
     border-right: 1px solid black;
+    cursor: pointer;
     }
     
 .main-nav li a, .submenu,.contactos {
@@ -93,7 +94,11 @@ p, li, ul {
     text-decoration: none;
     white-space: nowrap;
     }
-    
+
+.main-nav li a span {
+    font-size: 1vw;
+}
+
 .main-nav li a:hover, .contactos:hover {
     background-color: #111;
     color: goldenrod;
@@ -115,6 +120,11 @@ p, li, ul {
     transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
     z-index: 2;
     overflow: hidden;
+}
+
+.main-nav .submenu.open-menu {
+    max-height: 400px;
+    display: block;
 }
 
 .main-nav li:hover .submenu {
@@ -331,17 +341,55 @@ table>tfoot:not(:last-child) {
     border: none;
 }
 
-.plan-estudios-p {
+.descripcion {
     width: 45vw;
-    display: flex;
-    flex-direction: row;
+    display: inline-table;
     margin-right: 2vw; 
     border-left: 3px solid #000; 
     padding-left: 2vw;
+    margin-bottom: 20px;
+}
+
+.descripcion .intro, .descripcion .ciclo-orientado, .descripcion .ciclo-basico {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.descripcion .intro {
+    float:none;
+}
+
+.descripcion .ciclo-orientado, .descripcion .ciclo-basico {
+    float: inline-start;
+}
+
+.descripcion h2, h3, h4 {
+    color:#7b002c;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+   }
+
+.descripcion button {
+    border: solid 3px #7b002c;
+    background-color: #FFF;
+    color: #7b002c;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    transition: background-color 0.3s ease-out;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.descripcion button:hover {
+    background-color: #7b002c;
+    color: #FFF;
 }
 
 @media (max-width: 800px) {
-    .plan-estudios-p, .foot-nav ul {
+    .descripcion, .foot-nav ul {
       flex-direction: column;
     }
   }
@@ -362,7 +410,7 @@ table>tfoot:not(:last-child) {
     width: calc(95vw - 6px);
   }
 
-  .plan-estudios-p {
+  .descripcion {
     width: 100%;
     border-left: none;
     border-top: 3px solid #000;
@@ -370,6 +418,7 @@ table>tfoot:not(:last-child) {
     padding-left: 0;
     margin-right: 10px;
    }
+
   .slider {
     float: none;
     width:80vw;

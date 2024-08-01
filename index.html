@@ -15,7 +15,7 @@
         <nav class="main-nav">
             <ul>
                 <li class="home"> <a href="#"><img src="images/home_.png" alt="home"></a></li>
-                <li onmouseover="openMenu()" onmouseout="closeMenu()"> <a href="proyectos.html"  style="margin-left: 4.2vw;">Proyectos institucionales</a>
+                <li onclick="openMenu()"> <a href="proyectos.html"  style="margin-left: 4.2vw;">Proyectos institucionales <span>▼</span></a>
                     <ul class="submenu">
                         <li> <a href="lectxPlacer.html">Lectura Por Placer</a></li>
                         <li> <a href="tisa.html">TISA</a></li>
@@ -26,7 +26,7 @@
                 </li>
                 <li> <a href="https://bibliotecaatica.000webhostapp.com" target=_blank>Biblioteca ATICA</a></li>
                 <li> <a href="inscripciones.html">Inscripciones</a></li>
-                <li class="contactos" onmouseover="openMenu()" onmouseout="closeMenu()">Contactos
+                <li class="contactos" onclick="openMenu()">Contactos <span>▼</span>
                     <ul class="submenu">
                         <li style="display: flex; align-items: center;">G-mail: <a href="mailto:atica.informes@gmail.com" style="margin-left: 5px; text-decoration: none;">atica.informes@gmail.com</a></li>
                         <li style="display: flex; align-items: center;">WhatsApp: <a href="https://wa.me/3585701186" style="margin-left: 5px; text-decoration: none;">3585701186</a></li>
@@ -164,13 +164,45 @@
                         </tr>
                     </table>
                 </div>
-                <div class="plan-estudios-p">
-                    <p style="margin-right: 10px">En estas asignaturas, los estudiantes adquirirán conocimientos en el ámbito de la informática, incluyendo la programación en lenguajes como PASCAL, HTML, CSS y JavaScript. Asimismo, aprenderán a diferenciar entre software, hardware, firmware y malware, optimizando la efectividad en el uso de sus sistemas operativos y dispositivos informáticos en su vida cotidiana. Además, se capacitarán en el uso de programas de gran relevancia actual, tales como Word, Excel y Photoshop, aprovechando al máximo sus funcionalidades.</p>
-                    <br>
-                    <p>En el ámbito artístico, los alumnos desarrollarán habilidades en fotografía, dibujo, teatro y música, fomentando nuevas formas de expresión creativa. Paralelamente, se iniciarán en la producción y comunicación audiovisual a través de las actividades realizadas en estas asignaturas, destacándose el proyecto de la revista "Punto de Fuga".</p>
+                <div class="descripcion">
+                        <div class="intro">
+                            <h2>Ciclo Básico y Orientado con Orientación Informática</h2>
+                            <hr class="linea-negra">
+                            <p>En nuestro colegio, el ciclo básico y el ciclo orientado están diseñados para proporcionar una educación integral con una especialización en informática. A través de estos ciclos, los estudiantes adquieren conocimientos y habilidades esenciales para el mundo moderno, desarrollando competencias en matemáticas, ciencias, lenguaje y tecnología.</p>
+                            <br>
+                            <h3>Objetivos de Aprendizaje</h3>
+                            <p>Nuestro objetivo es preparar a los estudiantes para el futuro, equipándolos con habilidades críticas en resolución de problemas, pensamiento lógico y uso de tecnologías de la información. La orientación informática les brinda una ventaja significativa en el mundo digital.</p>
+                            <br>
+                            <h4 style="text-align: center; margin: 10px">¿Estás interesado?</h4>
+                        </div>
+                        <a href="index.html" style="text-decoration: none !important;"><button>Conocer Más +</button></a>
+                        <!--
+                        <div class="ciclo-basico">
+                            <hr class="linea-negra">
+                            <h3>Estructura del Ciclo Básico</h3>
+                            <p>El ciclo básico abarca los primeros tres años de educación secundaria, proporcionando una base sólida en diversas disciplinas.</p>
+                            <ul>
+                                <li><strong>Matemáticas:</strong> Conceptos fundamentales de aritmética, álgebra y geometría.</li>
+                                <li><strong>Ciencias Naturales:</strong> Introducción a la biología, química y física.</li>
+                                <li><strong>Lengua y Literatura:</strong> Desarrollo de habilidades de lectura, escritura y comprensión.</li>
+                                <li><strong>Informática Básica:</strong> Fundamentos de informática y uso de software básico.</li>
+                            </ul>
+                        </div>
+                        <div class="ciclo-orientado">
+                            <hr class="linea-negra">
+                            <h3>Estructura del Ciclo Orientado</h3>
+                            <p>El ciclo orientado se enfoca en la especialización en informática, abarcando los últimos tres años de educación secundaria.</p>
+                            <ul>
+                                <li><strong>Programación:</strong> Aprendizaje de lenguajes de programación como Python y Java.</li>
+                                <li><strong>Redes y Sistemas:</strong> Conceptos de redes informáticas y administración de sistemas.</li>
+                                <li><strong>Desarrollo de Software:</strong> Metodologías y prácticas para el desarrollo de aplicaciones.</li>
+                                <li><strong>Base de Datos:</strong> Diseño, implementación y gestión de bases de datos.</li>
+                            </ul>
+                            <h3>Ventajas de la Orientación Informática</h3>
+                            <p>Elegir una orientación informática brinda a los estudiantes una preparación excelente para carreras tecnológicas, desarrollando habilidades críticas y capacidad de adaptación. Además, ofrecemos oportunidades adicionales como proyectos prácticos, participación en competiciones y colaboración con la industria tecnológica.</p>
+                        </div>
+                        -->
                 </div>
-            </div>
-            <p>Si querés conocer más acerca de las materias detalladas, hacé click <a href="">aquí</a>.</p>
         </div>
     </div>
     <div id="foot">
@@ -190,6 +222,7 @@
     </div>
     <div id="foot-credits">
         <hr class="linea-negra">
+        <p style="margin-top: 26px;">Isabel La Católica 735 | Río Cuarto</p>
         <img src="images/credit.png" alt="credit" srcset="">
         <p>Promo 2024</p>
         <p>©2024 | Comunidad Educativa ATICA | All rights reserved.</p>

@@ -1,18 +1,9 @@
-function openMenu() {
-    let subMenus = document.getElementsByClassName("submenu");
-    for (let i = 0; i < subMenus.length; i++) {
-        subMenus[i].style.maxHeight = subMenus[i].scrollHeight + "px";
-        subMenus[i].style.opacity = "1";
-    }
-}
+let subMenus = document.getElementsByClassName("submenu");
 
-function closeMenu() {
-    let subMenus = document.getElementsByClassName("submenu");
-    for (let i = 0; i < subMenus.length; i++) {
-        subMenus[i].style.maxHeight = "0px";
-        subMenus[i].style.opacity = "0";
+function openMenu() {
+        subMenus.classList.toggle("open-menu");
     }
-}
+
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
