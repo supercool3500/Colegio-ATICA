@@ -1,8 +1,33 @@
-let subMenus = document.getElementsByClassName("submenu");
+let isMenuOpen = false; // Variable para rastrear el estado del menú
 
-function openMenu() {
-        subMenus.classList.toggle("open-menu");
+function toggleMenu(event) {
+    event.stopPropagation();
+    const target = event.currentTarget;
+    const subMenu = target.querySelector(".submenu");
+
+    if (subMenu.classList.contains("show")) {
+        closeMenu(subMenu);
+    } else {
+        openMenu(subMenu);
     }
+}
+
+function openMenu(subMenu) {
+    subMenu.classList.add("show");
+}
+
+function closeMenu(subMenu) {
+    subMenu.classList.remove("show");
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuItems = document.querySelectorAll('.main-nav li');
+    menuItems.forEach(item => {
+        if (item.querySelector('.submenu')) {
+            item.addEventListener('click', toggleMenu);
+        }
+    });
+});
 
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');

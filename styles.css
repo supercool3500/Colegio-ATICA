@@ -86,7 +86,7 @@ p, li, ul {
     cursor: pointer;
     }
     
-.main-nav li a, .submenu,.contactos {
+.main-nav li a, .main-nav .submenu,.contactos, .proyectos {
     display: block;
     color: white;
     text-align: center;
@@ -99,7 +99,7 @@ p, li, ul {
     font-size: 1vw;
 }
 
-.main-nav li a:hover, .contactos:hover {
+.main-nav li a:hover, .contactos:hover, .proyectos:hover {
     background-color: #111;
     color: goldenrod;
     transition: 300ms ease-in;
@@ -113,7 +113,7 @@ p, li, ul {
 
 .main-nav .submenu{
     border-radius: 10px;
-    display: none;
+    opacity: 0;
     position: absolute;
     background-color: #333;
     max-height: 0px;
@@ -122,13 +122,9 @@ p, li, ul {
     overflow: hidden;
 }
 
-.main-nav .submenu.open-menu {
+.main-nav .submenu.show{
     max-height: 400px;
-    display: block;
-}
-
-.main-nav li:hover .submenu {
-    display: block;
+    opacity: 1;
 }
 
 .main-nav .submenu li {
