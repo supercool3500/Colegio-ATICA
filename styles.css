@@ -304,13 +304,14 @@ p, li, ul {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
-    background-color: #333;
-    color: #FFF;
+    background-color: #FFF;
+    color: #7b002c;
     max-height: 0px;
-    transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
+    transition: max-height 0.8s ease-out;
     overflow: hidden;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     z-index: 1;
 }
 
@@ -320,7 +321,6 @@ p, li, ul {
 
 .materias-info .ciclo-basico ul li ul.submenu.show, .materias-info .ciclo-orientado ul li ul.submenu.show {
     max-height: 800px;
-    opacity: 1;
 }
 
 #foot {
@@ -406,6 +406,10 @@ p, li, ul {
 @media (max-width: 600px) {
     .main-nav .submenu {
         width: 150px;
+    }
+
+    .materias-info .submenu {
+        right: 20px;
     }
 
   .materias {
