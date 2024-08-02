@@ -226,7 +226,7 @@ p, li, ul {
     border-bottom: 1px solid #111;
 }
 
-.slide-title, .inscripciones-info, .prioridad, .proceso {
+.slide-title, .inscripciones-info, .prioridad, .proceso, .plan {
     text-align: left;
     margin-left: 52px;
     margin-top: 26px;
