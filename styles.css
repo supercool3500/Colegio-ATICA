@@ -142,10 +142,14 @@ p, li, ul {
     border-bottom: 1px solid #111;
 }
 
-.slide-title {
+.slide-title, .inscripciones-info, .prioridad, .proceso {
     text-align: left;
     margin-left: 52px;
     margin-top: 26px;
+}
+
+.inscripciones-info, .prioridad {
+    width: 80%;
 }
 
 .slider{
@@ -378,7 +382,7 @@ p, li, ul {
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
    }
 
-.descripcion button {
+.descripcion button  {
     border: solid 3px #7b002c;
     background-color: #FFF;
     color: #7b002c;
@@ -393,7 +397,21 @@ p, li, ul {
     white-space: nowrap;
 }
 
-.descripcion button:hover {
+.proceso button {
+    border: solid 3px #7b002c;
+    background-color: #FFF;
+    color: #7b002c;
+    display: block;
+    width: fit-content;
+    height: 50px;
+    transition: background-color 0.3s ease-out;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.descripcion button:hover, .proceso button:hover {
     background-color: #7b002c;
     color: #FFF;
 }
