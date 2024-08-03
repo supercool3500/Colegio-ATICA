@@ -33,6 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click', toggleMenu);
         }
     });
+
+    document.addEventListener('click', (event) => {
+        if (currentOpenSubMenu && !currentOpenSubMenu.contains(event.target)) {
+            closeMenu(currentOpenSubMenu);
+            currentOpenSubMenu = null;
+        }
+    });
 });
 
 // Slider functionality
@@ -44,17 +51,28 @@ let dots = document.querySelectorAll('.slider .dots li');
 
 let lengthItems = items.length - 1;
 let active = 0;
-next.onclick = function(){
+
+next.onclick = function() {
+    changeSlide(true);
+}
+
+prev.onclick = function() {
+    changeSlide(false);
+}
+
+let refreshInterval = setInterval(() => { autoChangeSlide() }, 3000);
+
+function changeSlide(isNext) {
+    active = isNext ? (active + 1 <= lengthItems ? active + 1 : 0) : (active - 1 >= 0 ? active - 1 : lengthItems);
+    reloadSlider();
+}
+
+function autoChangeSlide() {
     active = active + 1 <= lengthItems ? active + 1 : 0;
     reloadSlider();
 }
-prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
-    reloadSlider();
-}
-let refreshInterval = setInterval(() => { next.click() }, 3000);
 
-function reloadSlider(){
+function reloadSlider() {
     slider.style.left = -items[active].offsetLeft + 'px';
 
     let last_active_dot = document.querySelector('.slider .dots li.active');
@@ -62,14 +80,14 @@ function reloadSlider(){
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => { next.click() }, 3000);
+    refreshInterval = setInterval(() => { autoChangeSlide() }, 3000);
 }
 
 dots.forEach((li, key) => {
     li.addEventListener('click', () => {
         active = key;
         reloadSlider();
-    })
+    });
 });
 
 window.onresize = function(event) {
