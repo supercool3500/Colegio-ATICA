@@ -1,14 +1,20 @@
-let isMenuOpen = false; // Variable para rastrear el estado del menú
+let currentOpenSubMenu = null;
 
 function toggleMenu(event) {
     event.stopPropagation();
     const target = event.currentTarget;
     const subMenu = target.querySelector(".submenu");
 
+    if (currentOpenSubMenu && currentOpenSubMenu !== subMenu) {
+        closeMenu(currentOpenSubMenu);
+    }
+
     if (subMenu.classList.contains("show")) {
         closeMenu(subMenu);
+        currentOpenSubMenu = null;
     } else {
         openMenu(subMenu);
+        currentOpenSubMenu = subMenu;
     }
 }
 
@@ -21,7 +27,7 @@ function closeMenu(subMenu) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const menuItems = document.querySelectorAll('.main-nav li');
+    const menuItems = document.querySelectorAll('.main-nav li, .materias-info li');
     menuItems.forEach(item => {
         if (item.querySelector('.submenu')) {
             item.addEventListener('click', toggleMenu);
@@ -29,30 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuItems = document.querySelectorAll('.materias-info li');
-    menuItems.forEach(item => {
-        if (item.querySelector('.submenu')) {
-            item.addEventListener('click', toggleMenu);
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const theads = document.querySelectorAll('thead');
-
-    theads.forEach(thead => {
-        thead.addEventListener('click', () => {
-            const submenu = thead.nextElementSibling;
-            if (submenu.classList.contains('show')) {
-                submenu.classList.remove('show');
-            } else {
-                submenu.classList.add('show');
-            }
-        });
-    });
-});
-
+// Slider functionality
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -69,26 +52,26 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
+let refreshInterval = setInterval(() => { next.click() }, 3000);
+
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
-    // 
+
     let last_active_dot = document.querySelector('.slider .dots li.active');
-    last_active_dot.classList.remove('active');
+    if (last_active_dot) last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-    
+    refreshInterval = setInterval(() => { next.click() }, 3000);
 }
 
 dots.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
+    li.addEventListener('click', () => {
         active = key;
         reloadSlider();
     })
-})
+});
+
 window.onresize = function(event) {
     reloadSlider();
 };
