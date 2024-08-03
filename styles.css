@@ -210,7 +210,7 @@ p, li, ul {
     background-color: #333;
     max-height: 0px;
     transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
-    z-index: 2;
+    z-index: 1;
     overflow: hidden;
     width: 300px;
 }
@@ -480,6 +480,7 @@ p, li, ul {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .proceso button {
@@ -494,7 +495,7 @@ p, li, ul {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    width: 30vw;
+
 }
 
 .descripcion button:hover, .proceso button:hover {
