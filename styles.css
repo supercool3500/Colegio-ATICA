@@ -12,15 +12,44 @@ a, abbr, acronym, address, big, cite, code {
      --height-calc: calc(1vw / 1vh);
 }
 
+#head {
+    z-index: 3;
+}
+
+#theme-header {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(#ECD0CC, #F8EAE1, #FFEEDF, #FFFCFA );
+    position: relative;
+    z-index: 3;
+}
+#theme-header img#logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 22vh;
+}
+
 #content {
-    overflow: hidden;
+    overflow: visible;
+    text-align: left;
+    margin-left: 52px;
+    margin-top: 26px;
     margin-bottom: 15px;
     margin-right: 20px;
+    z-index: 2;
 }
+
+#foot {
+    clear: both;
+    z-index: 1;
+    background-color: #d6d6d6;
+}
+
 
 h1 {
     color: #7b002c;
-    font-size: 2vmax;
+    font-size: 4.5vmin;
 }
 
 h1, h2, p, li, ul, h3, h4{
@@ -31,21 +60,21 @@ p, li, ul {
     font-size: 2.5vmin;
 }
 
-
-
-#theme-header {
-    width: 100%;
-    height: auto;
-    background-image: linear-gradient(#ECD0CC, #F8EAE1, #FFEEDF, #FFFCFA );
-}
-#theme-header img#logo {
-    display: block;
+.punto-de-fuga-2021, .punto-de-fuga-2022 {
     margin: 0 auto;
-    max-width: 100%;
-    height: 22vh;
+    text-align: center;
 }
 
-.left-container {
+.ediciones-disponibles {
+    margin-top: 15px;
+}
+
+.ediciones-disponibles iframe {
+    width: 100%;
+    height: 50vh;
+}
+
+.left-container, .materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu, .container-info, .container-form, .materias .materias-info, .punto-de-fuga-2021, .punto-de-fuga-2022  {
     display: flex;
     flex-direction: column;
 }
@@ -68,14 +97,13 @@ p, li, ul {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.container {
+.container, .materias, .ediciones-disponibles {
     display: flex;
     flex-direction: row;
 }
 
 .container-info {
-    display: flex;
-    flex-direction: column;
+    padding-left: 10px;
     border-left: 2px solid #000;
     margin-top: 10px;
 }
@@ -85,8 +113,6 @@ p, li, ul {
 }
 
 .container-form {
-    display: flex;
-    flex-direction: column;
     float: left;
     background: #FFF;
     padding: 20px;
@@ -210,7 +236,6 @@ p, li, ul {
     background-color: #333;
     max-height: 0px;
     transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
-    z-index: 1;
     overflow: hidden;
     width: 300px;
 }
@@ -228,18 +253,13 @@ p, li, ul {
     border-bottom: 1px solid #111;
 }
 
-.slide-title, .inscripciones-info, .prioridad, .proceso, .plan {
-    text-align: left;
-    margin-left: 52px;
-    margin-top: 26px;
-}
 
 .inscripciones-info, .prioridad {
     width: 80%;
 }
 
 .slider{
-    margin: 0px 26px 20px 52px;
+    margin: 0px 26px 20px 0px;
     float: left;
     border-radius: 30px;
     width: 50vw;
@@ -345,18 +365,9 @@ p, li, ul {
 
 .plan-estudios {
     float: left;
-    margin-left: 26px;
-}
-
-.materias {
-    display: flex;
-    flex-direction: row;
 }
 
 .materias .materias-info {
-    display: flex;
-    flex-direction: column;
-    white-space: nowrap;
     flex: 1;
 }
 
@@ -391,8 +402,6 @@ p, li, ul {
 
 .materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu {
     margin: 0px 15px 0px 15px;
-    display: flex;
-    flex-direction: column;
     border-radius: 10px;
     position: absolute;
     background-color: #FFF;
@@ -401,7 +410,8 @@ p, li, ul {
     transition: max-height 0.8s ease-out;
     overflow: hidden;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    z-index: 1;
+    z-index: 2;
+    white-space: nowrap;
 }
 
 .materias-info .ciclo-basico ul li ul.submenu li, .materias-info .ciclo-orientado ul li ul.submenu li {
@@ -410,12 +420,6 @@ p, li, ul {
 
 .materias-info .ciclo-basico ul li ul.submenu.show, .materias-info .ciclo-orientado ul li ul.submenu.show {
     max-height: 800px;
-}
-
-#foot {
-    position: relative;
-    background-color: #d6d6d6;
-    clear: both;
 }
 
 .foot-nav {
@@ -483,7 +487,13 @@ p, li, ul {
     cursor: pointer;
 }
 
-.proceso button {
+.ediciones-disponibles button {
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.proceso button, .ediciones-disponibles button {
     border: solid 3px #7b002c;
     background-color: #FFF;
     color: #7b002c;
@@ -495,16 +505,17 @@ p, li, ul {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    cursor: pointer;
 
 }
 
-.descripcion button:hover, .proceso button:hover {
+.descripcion button:hover, .proceso button:hover, .ediciones-disponibles button:hover {
     background-color: #7b002c;
     color: #FFF;
 }
 
 @media (max-width: 800px) {
-    .descripcion, .foot-nav ul {
+    .descripcion, .foot-nav ul, .ediciones-disponibles {
       flex-direction: column;
     }
   }
@@ -516,6 +527,7 @@ p, li, ul {
     .container-info {
         border-left: 0;
         border-top: 2px solid #000;
+        padding-top: 10px;
     }
 
     .container-form {
@@ -543,7 +555,7 @@ p, li, ul {
   }
 
   .plan-estudios {
-    width: calc(95vw - 6px);
+    width: auto;
   }
 
   .descripcion {
