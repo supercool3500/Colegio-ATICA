@@ -12,6 +12,10 @@ a, abbr, acronym, address, big, cite, code {
      --height-calc: calc(1vw / 1vh);
 }
 
+body {
+    caret-color: transparent;
+}
+
 #head {
     z-index: 3;
 }
@@ -60,6 +64,21 @@ p, li, ul {
     font-size: 2.5vmin;
 }
 
+.info {
+    width: 100vw;
+    border-left: 3px solid #af0e47;
+    padding-left: 20px;
+}
+
+.portada img {
+    width: 20vw;
+    height: auto;
+}
+
+.portada {
+    margin-right: 20px;
+}
+
 .punto-de-fuga-2021, .punto-de-fuga-2022 {
     margin: 0 auto;
     text-align: center;
@@ -69,12 +88,35 @@ p, li, ul {
     margin-top: 15px;
 }
 
+.parlamento-galeria {
+    margin-top: 26px;
+    justify-content: center;
+}
+
 .ediciones-disponibles iframe {
     width: 100%;
     height: 50vh;
 }
 
-.left-container, .materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu, .container-info, .container-form, .materias .materias-info, .punto-de-fuga-2021, .punto-de-fuga-2022  {
+.parlamento-info-p, .parlamento-title {
+    width: 50vw;
+    margin-right: 25px;
+}
+
+.parlamento-info-p {
+    padding: 26px;
+}
+
+.parlamento-info-p {
+    border-left: 2px solid #7b002c;
+}
+
+.parlamento-title img {
+    border-radius: 30px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+.left-container, .materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu, .container-info, .container-form, .materias .materias-info, .punto-de-fuga-2021, .punto-de-fuga-2022, .info, .parlamento-title, .parlamento-info-p  {
     display: flex;
     flex-direction: column;
 }
@@ -97,7 +139,7 @@ p, li, ul {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.container, .materias, .ediciones-disponibles {
+.container, .materias, .ediciones-disponibles, .main-content, .galeria, .parlamento-info, .parlamento-galeria {
     display: flex;
     flex-direction: row;
 }
@@ -123,10 +165,11 @@ p, li, ul {
 }
 
 .container-form form {
+    caret-color: #af0e47;
     margin-right: 20px;
 }
 
-.container-form h2 {
+.container-form h2, .inscripciones-info, .prioridad {
     margin-bottom: 20px;
 }
 
@@ -136,6 +179,11 @@ p, li, ul {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.container-form textarea {
+    resize: vertical;
+    min-height: 20px;
 }
 
 .container-form button {
@@ -173,6 +221,28 @@ p, li, ul {
     align-self: flex-end;
 }
 
+.lectura-por-placer-img-title img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.lectura-por-placer-img-title {
+    margin-bottom: 20px;
+}
+
+.galeria img {
+    display: block;
+    margin: 0 auto;
+    width: 15vw;
+    height: 30vw;
+}
+
+.parlamento-galeria img {
+    display: block;
+    width: 20vw;
+    height: 21vw;
+}
 
 .home img {
     width: 100%;
@@ -254,7 +324,7 @@ p, li, ul {
 }
 
 
-.inscripciones-info, .prioridad {
+.inscripciones-info, .prioridad, .info, .lpp-info, .parlamento-info {
     width: 80%;
 }
 
@@ -367,7 +437,7 @@ p, li, ul {
     float: left;
 }
 
-.materias .materias-info {
+.materias .materias-info, .parlamento-info-p, .parlamento-title {
     flex: 1;
 }
 
@@ -466,7 +536,7 @@ p, li, ul {
     float:none;
 }
 
-.descripcion h2, .descripcion h3 , h4 {
+.descripcion h2, .galeria-title, .descripcion h3 , .punto-de-fuga-2021 h3, .punto-de-fuga-2022 h3, h4 {
     color:#7b002c;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
    }
@@ -485,6 +555,14 @@ p, li, ul {
     font-weight: bold;
     white-space: nowrap;
     cursor: pointer;
+}
+
+.line-separator {
+    display: block;
+    border-top: 4px solid #af0e47;
+    height: 10px;
+    width: 50px;
+    margin: 10px 5px;
 }
 
 .ediciones-disponibles button {
@@ -515,9 +593,33 @@ p, li, ul {
 }
 
 @media (max-width: 800px) {
-    .descripcion, .foot-nav ul, .ediciones-disponibles {
+    .descripcion, .foot-nav ul, .ediciones-disponibles, .main-content, .parlamento-info {
       flex-direction: column;
     }
+    
+    .info, .parlamento-info-p {
+        border-left: 0;
+        border-top: 2px solid #af0e47;
+        padding-top: 10px;
+    }
+
+    .parlamento-title {
+        margin-bottom: 26px;
+    }
+
+    .parlamento-info-p {
+        padding: 26px 0 0 0;
+    }
+
+    .portada img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        width: 90vw;
+        height: auto;
+        border-radius: 30px;
+    }
+
   }
 @media (max-width: 600px) {
     .container {

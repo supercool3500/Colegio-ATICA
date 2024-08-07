@@ -1,5 +1,17 @@
 let currentOpenSubMenu = null;
 
+function cambiarImagen() {
+    const imagen = document.getElementById("image");
+    if (window.innerWidth <= 800) {
+      imagen.src = "images/puntodefuga.png";
+    } else {
+      imagen.src = "images/punto-de-fuga-portada.jpeg";
+    }
+  }
+
+window.onload = cambiarImagen;
+window.addEventListener('resize', cambiarImagen);
+
 function toggleMenu(event) {
     event.stopPropagation();
     const target = event.currentTarget;

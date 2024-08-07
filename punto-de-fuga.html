@@ -15,7 +15,7 @@
                 <li class="home"> <a href="index.html"><img src="images/home_.png" alt="home"></a></li>
                 <li class="proyectos" style="margin-left: 4.2vw;">Proyectos institucionales <span>▼</span>
                     <ul class="submenu">
-                        <li> <a href="lectxPlacer.html">Lectura Por Placer</a></li>
+                        <li> <a href="lectura-por-placer.html">Lectura Por Placer</a></li>
                         <li> <a href="tisa.html">TISA</a></li>
                         <li> <a href="bicicleteada.html">Bicicleteada</a></li>
                         <li> <a href="parlamento-estudiantil.html">Parlamento Estudiantil</a></li>
@@ -28,7 +28,7 @@
                 <li class="contactos">Contactos <span>▼</span>
                     <ul class="submenu">
                         <li style="display: flex; align-items: center;">G-mail: <a href="mailto:atica.informes@gmail.com" style="margin-left: 5px; text-decoration: none;">atica.informes@gmail.com</a></li>
-                        <li style="display: flex; align-items: center;">WhatsApp: <a href="https://wa.me/3585701186" style="margin-left: 5px; text-decoration: none;">3585701186</a></li>
+                        <li style="display: flex; align-items: center;">WhatsApp: <a href="https://wa.me/+5493585701186" style="margin-left: 5px; text-decoration: none;">3585701186</a></li>
                         <li style="display: flex; align-items: center;">Teléfono:<a href="tel:0358-462-4307" style="margin-left: 5px; text-decoration: none;">0358 462-4307</a></li>
                     </ul>
                 </li>
@@ -37,29 +37,48 @@
     </header>
     </div>
     <div id="content">
-        <h1>Punto de Fuga</h1>
-        <div class="punto-de-fuga-descripcion">
-            <p>Realizada por los estudiantes de sexto año, Punto de Fuga es la revista institucional y uno de los primeros y más importantes proyectos de nuestra comunidad.</p>
-            <p>Este espacio permite a los estudiantes expresar, socializar y comunicar desde sucesos actuales (crónicas, noticias, etc.) hasta publicar sus propias notas de opinión.</p>
-            <p>En su proceso de creación se ponen en prueba los conocimientos adquiridos en la elaboración de notas periodísticas, recolección de fuentes y datos confiables, complementado con el uso de software de edición para la producción.</p>
-        </div>
-        <h2 style="color: #7b002c; margin-top: 15px;">Nuestras ediciones disponibles</h2>
-        <div class="ediciones-disponibles">
-            <div class="punto-de-fuga-2021">
-                <h3>Punto de Fuga 2021</h3>
-                <object data="docs/punto-de-fuga-2021.pdf" type="application/pdf" width="100%" height="400px">
-                    <p>Ups! Parece que hubo un error al intentar mostrar este archivo. Prueba a <a href="docs/punto-de-fuga-2021.pdf">descargarlo</a> en su lugar.</p>
-                </object>
-                <button onclick="document.getElementById('pdf-link-1').click()">Descargar PDF</button>
-                <a id="pdf-link-1" href="docs/punto-de-fuga-2021.pdf" download hidden target="_blank"></a>
+        <div class="main-content">
+            <div class="portada">
+                <img id="image" src="images/punto-de-fuga-portada.jpeg" alt="Punto de Fuga - Portada" srcset="">
             </div>
-            <div class="punto-de-fuga-2022">
-                <h3>Punto de Fuga 2022</h3>
-                <object data="docs/punto-de-fuga-2022.pdf" type="application/pdf" width="100%" height="400px">
-                    <p>Ups! Parece que hubo un error al intentar mostrar este archivo. Prueba a <a href="docs/punto-de-fuga-2022.pdf">descargarlo</a> en su lugar.</p>
-                </object>
-                <button onclick="document.getElementById('pdf-link-2').click()">Descargar PDF</button>
-                <a id="pdf-link-2" href="docs/punto-de-fuga-2022.pdf" download hidden target="_blank"></a>
+            <div class="info">
+                <h1>Punto de Fuga</h1>
+                <span class="line-separator"></span>
+                <div class="punto-de-fuga-descripcion">
+                    <p>Realizada por los estudiantes de sexto año, Punto de Fuga es la revista institucional y uno de los primeros y más importantes proyectos de nuestra comunidad.</p>
+                    <p>Este espacio permite a los estudiantes expresar, socializar y comunicar desde sucesos actuales (crónicas, noticias, etc.) hasta publicar sus propias notas de opinión.</p>
+                    <p>En su proceso de creación se ponen en prueba los conocimientos adquiridos en la elaboración de notas periodísticas, recolección de fuentes y datos confiables, complementado con el uso de software de edición para la producción.</p>
+                </div>
+                <div class="equipo-editorial">
+                    <h2 style="color: #7b002c; margin-top: 15px;">Formación del equipo editorial</h2>
+                    <span class="line-separator"></span>
+                    <p>El equipo editorial de la revista está formado únicamente por los estudiantes de sexto año de la institución. Dentro de él, podemos encontrar: </p>
+                    <ul>
+                        <li>Redactores: Integrado por la mayor parte del curso, son los principales encargados de la preparación y redacción de los artículos de la revista</li>
+                        <li>Editores</li>
+                        <li>Diseñadores: Son los encargados del diseño y el estilo que se le brinda cada año a la revista. Los diseñadores deben tener habilidades en diseño gráfico, como el uso de PhotoShop e InDesign, para poder brindar el mejor estilo a la revista.</li>
+                    </ul>
+                </div>
+                <h2 style="color: #7b002c; margin-top: 15px;">Nuestras ediciones disponibles</h2>
+                <span class="line-separator"></span>
+                <div class="ediciones-disponibles">
+                    <div class="punto-de-fuga-2021">
+                        <h3>Punto de Fuga 2021</h3>
+                        <object data="docs/punto-de-fuga-2021.pdf" type="application/pdf" width="100%" height="400px">
+                            <p>¡Ups! Parece que hubo un error al intentar mostrar este archivo. Prueba a <a href="docs/punto-de-fuga-2021.pdf">descargarlo</a> en su lugar.</p>
+                        </object>
+                        <button onclick="document.getElementById('pdf-link-1').click()">Descargar PDF</button>
+                        <a id="pdf-link-1" href="docs/punto-de-fuga-2021.pdf" download hidden target="_blank"></a>
+                    </div>
+                    <div class="punto-de-fuga-2022">
+                        <h3>Punto de Fuga 2022</h3>
+                        <object data="docs/punto-de-fuga-2022.pdf" type="application/pdf" width="100%" height="400px">
+                            <p>¡Ups! Parece que hubo un error al intentar mostrar este archivo. Prueba a <a href="docs/punto-de-fuga-2022.pdf">descargarlo</a> en su lugar.</p>
+                        </object>
+                        <button onclick="document.getElementById('pdf-link-2').click()">Descargar PDF</button>
+                        <a id="pdf-link-2" href="docs/punto-de-fuga-2022.pdf" download hidden target="_blank"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
