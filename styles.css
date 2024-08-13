@@ -64,6 +64,10 @@ p, li, ul {
     font-size: 2.5vmin;
 }
 
+p {
+    text-align: justify;
+}
+
 .info {
     width: 100vw;
     border-left: 3px solid #af0e47;
@@ -88,17 +92,58 @@ p, li, ul {
     margin-top: 15px;
 }
 
-.parlamento-galeria {
-    margin-top: 26px;
-    justify-content: center;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
+.gallery-item {
+    height: 22vw;
+    width: 20vw;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
 .ediciones-disponibles iframe {
     width: 100%;
     height: 50vh;
 }
 
-.parlamento-info-p, .parlamento-title {
+.parlamento-title {
     width: 50vw;
     margin-right: 25px;
 }
@@ -238,12 +283,6 @@ p, li, ul {
     height: 30vw;
 }
 
-.parlamento-galeria img {
-    display: block;
-    width: 20vw;
-    height: 21vw;
-}
-
 .home img {
     width: 100%;
     height: auto;
@@ -324,7 +363,7 @@ p, li, ul {
 }
 
 
-.inscripciones-info, .prioridad, .info, .lpp-info, .parlamento-info {
+.inscripciones-info, .prioridad, .info, .lpp-info {
     width: 80%;
 }
 
@@ -437,7 +476,7 @@ p, li, ul {
     float: left;
 }
 
-.materias .materias-info, .parlamento-info-p, .parlamento-title {
+.materias .materias-info, .parlamento-title {
     flex: 1;
 }
 
