@@ -48,8 +48,9 @@
                     </div>
                     <div class="container-form">
                         <h2>Formulario de inscripción</h2>
-                        <form>
+                        <form action="connect.php" method="post">
                             <input type="text" name="nombre" placeholder="Nombre" required>
+                            <input type="text" name="apellido" placeholder="Apellido" required>
                             <input type="tel" name="telefono" placeholder="Teléfono" required>
                             <input type="email" name="email" placeholder="Email" required>
                             <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
@@ -95,10 +96,10 @@
         </div>
         <div id="foot-credits">
             <hr class="linea-negra">
-            <p style="margin-top: 26px;">Isabel La Católica 735 | Río Cuarto | Córdoba | Argentina</p>
+            <p style="margin-top: 26px; text-align: center;">Isabel La Católica 735 | Río Cuarto | Córdoba | Argentina</p>
             <img src="images/credit.png" alt="credit" srcset="">
-            <p>Promo 2024</p> <br>
-            <p>©2024 | Comunidad Educativa ATICA | All rights reserved.</p>
+            <p style="text-align: center;">Promo 2024</p> <br>
+            <p style="text-align: center;">©2024 | Comunidad Educativa ATICA | All rights reserved.</p>
         </div>
     <script src="app.js"></script>
 </body>
