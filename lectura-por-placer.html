@@ -16,20 +16,19 @@
                     <li class="home"> <a href="index.html"><img src="images/home_.png" alt="home"></a></li>
                     <li class="proyectos" style="margin-left: 4.2vw;">Proyectos institucionales <span>▼</span>
                         <ul class="submenu">
-                            <li> <a href="lectura-por-placer.html">Lectura Por Placer</a></li>
                             <li> <a href="tisa.html">TISA</a></li>
                             <li> <a href="bicicleteada.html">Bicicleteada</a></li>
                             <li> <a href="punto-de-fuga.html">Punto de Fuga</a></li>
                             <li> <a href="parlamento-estudiantil.html">Parlamento Estudiantil</a></li>
                             <li> <a href="feria-de-ciencias.html">Feria de Ciencias</a></li>
-                            <li> <a href="prensa-difusion">Prensa y Difusión</a></li>
+                            <li> <a href="prensa-difusion.html">Prensa y Difusión</a></li>
                         </ul>
                     </li>
                     <li class="biblioteca"> <a href="https://bibliotecaatica.000webhostapp.com" target=_blank>Biblioteca ATICA</a></li>
                     <li class="contactos">Contactos <span>▼</span>
                         <ul class="submenu">
                             <li style="display: flex; align-items: center;">G-mail: <a href="mailto:atica.informes@gmail.com" style="margin-left: 5px; text-decoration: none;">atica.informes@gmail.com</a></li>
-                            <li style="display: flex; align-items: center;">WhatsApp: <a href="https://wa.me/+5493585701186" style="margin-left: 5px; text-decoration: none;">3585701186</a></li>
+                            <li style="display: flex; align-items: center;">WhatsApp: <a href="https://wa.me/5493585701186" style="margin-left: 5px; text-decoration: none;">3585701186</a></li>
                             <li style="display: flex; align-items: center;">Teléfono:<a href="tel:0358-462-4307" style="margin-left: 5px; text-decoration: none;">0358 462-4307</a></li>
                         </ul>
                     </li>
@@ -45,16 +44,22 @@
                 <h1>Lectura Por Placer</h1>
                 <span class="line-separator"></span>
                 <p>Lectura por placer es el nombre del proyecto que pretende fomentar el desarrollo de la lectura entre los alumnos, brindando, durante el tiempo que dura, un tiempo de la mañana para que los estudiantes puedan leer los libros que han elegido.</p>
+                <br>
                 <p>El proyecto cuenta con un catálogo de libros diseñado por los profesores de Inglés y Lengua y Literatura, específico a cada uno de los dos ciclos (básico y orientado).</p>
+                <br>
                 <p>Finalizada la lectura de los libros, los estudiantes realizan una actividad reflexiva acerca de lo leído, incentivando, de esta manera, el pensamiento crítico y creativo de los mismos.</p>
             </div>
             <h2 class="galeria-title">Galería</h2>
             <span class="line-separator"></span>
-            <div class="galeria">
-                <img src="images/a-dos-metros-de-ti.png" alt="A Dos Metros de Ti" srcset="">
-                <img src="images/Anne with an E.png" alt="Anne With an E" srcset="">
-                <img src="images/caidos-del-mapa.png" alt="Caídos del Mapa" srcset="">
-                <img src="images/maze-runner.png" alt="">
+            <div class="gallery">
+                <img src="images/a-dos-metros-de-ti.png" alt="Descripción 1" class="gallery-item">
+                <img src="images/Anne with an E.png" alt="Descripción 2" class="gallery-item">
+                <img src="images/caidos-del-mapa.png" alt="Descripción 3" class="gallery-item">
+                <img src="images/maze-runner.png" alt="Descripción 4" class="gallery-item">
+            </div>
+            <div id="lightbox" class="lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
             </div>
         </div>
         <div id="foot">
@@ -80,5 +85,28 @@
             <p style="text-align: center;">©2024 | Comunidad Educativa ATICA | All rights reserved.</p>
         </div>
     <script src="app.js"></script>
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                lightboxImg.src = item.src;
+            });
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+        </script>
 </body>
 </html>

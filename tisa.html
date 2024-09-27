@@ -17,9 +17,9 @@
                     <li class="proyectos submenu-container" style="margin-left: 4.2vw;">Proyectos institucionales <span>▼</span>
                         <ul class="submenu">
                             <li> <a href="lectura-por-placer.html">Lectura Por Placer</a></li>
-                            <li> <a href="tisa.html">TISA</a></li>
                             <li> <a href="bicicleteada.html">Bicicleteada</a></li>
                             <li> <a href="punto-de-fuga.html">Punto de Fuga</a></li>
+                            <li> <a href="parlamento-estudiantil.html">Parlamento Estudiantil</a></li>
                             <li> <a href="feria-de-ciencias.html">Feria de Ciencias</a></li>
                             <li> <a href="prensa-difusion.html">Prensa y Difusión</a></li>
                         </ul>
@@ -38,30 +38,11 @@
         </header>
     </div>
     <div id="content">
-        <div class="parlamento-info">
-            <div class="parlamento-title">
-            <h1>Parlamento Estudiantil</h1>
-            <img src="images/parlamento-img-header.png" alt="Parlamento Estudiantil">
-            </div>
-            <div class="parlamento-info-p">
-                <p>Parlamento Estudiantil es un programa de participación juvenil impulsado por el Concejo Deliberante de la Ciudad de Río Cuarto, donde se fomenta la participación política y el debate de ideas para la construcción colectiva de proyectos que impacten en la ciudad.</p>
-                <p>En él, interactúan cientos de jóvenes estudiantes de nivel medio de escuelas públicas y privadas, presentando proyectos y debatiéndolos en el Concejo.</p>
-                <p>Los concejales, como tutores de cada institución, acompañan al proceso desde la creación hasta la presentación de las iniciativas, y se articulan con distintas áreas municipales para llevar a cabo los proyectos.</p>
-            </div>
-        </div>
-        <h2 class="galeria-title" style="margin-top: 26px;">Galería</h2>
+        <h1>Taller de Integración Social y Artístico</h1>
         <span class="line-separator"></span>
-        <div class="gallery">
-            <img src="images/parlamento-galeria-01.png" alt="Descripción 1" class="gallery-item">
-            <img src="images/parlamento-galeria-02.png" alt="Descripción 2" class="gallery-item">
-            <img src="images/parlamento-galeria-03.png" alt="Descripción 3" class="gallery-item">
-            <!-- Agrega más imágenes aquí -->
-        </div>
-    
-        <div id="lightbox" class="lightbox">
-            <span class="close">&times;</span>
-            <img class="lightbox-content" id="lightbox-img">
-        </div>
+        <p>Más conocido institucionalmente por sus siglas "TISA", es un evento emblemático de la comunidad, en el que los estudiantes tienen un lugar para compartir todo lo trabajado durante el año, con la idea de poder transmitir todos los conocimientos adquiridos con los familiares, amigos y vecinos que concurren.</p>
+        <br>
+        <p>Además, este espacio es utilizado por los jóvenes para poder expresarse empleando diversas disciplinas propias de la especialización.</p>
     </div>
     <div id="foot">
         <h2 style="margin-bottom: 5px; margin-left: 26px; padding-top: 8px;">Redes Sociales</h2>
@@ -86,28 +67,5 @@
         <p style="text-align: center;">©2024 | Comunidad Educativa ATICA | All rights reserved.</p>
     </div>
     <script src="app.js"></script>
-    <script>
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeBtn = document.querySelector('.close');
-        
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                lightbox.style.display = 'block';
-                lightboxImg.src = item.src;
-            });
-        });
-        
-        closeBtn.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
-        
-        lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImg) {
-                lightbox.style.display = 'none';
-            }
-        });
-        </script>
 </body>
 </html>
