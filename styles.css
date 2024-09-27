@@ -166,6 +166,10 @@ p {
     flex-direction: column;
 }
 
+.left-container {
+    border-right: 2px solid #000;
+}
+
 .equipo img {
     display: block;
     width: 100%;
@@ -198,7 +202,6 @@ p {
 
 .container-info {
     padding-left: 10px;
-    border-left: 2px solid #000;
     margin-top: 10px;
 }
 
@@ -416,6 +419,7 @@ p {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 .slider .buttons button{
     width: 4vw;
@@ -427,6 +431,7 @@ p {
     font-family: monospace;
     font-weight: bold;
     transition: background-color 0.5s ease-out;
+    cursor: pointer;
 }
 .slider .dots{
     position: absolute;
@@ -438,6 +443,7 @@ p {
     padding: 0;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .slider .buttons button:hover {
@@ -676,8 +682,8 @@ p {
         flex-direction: column;
     }
 
-    .container-info {
-        border-left: 0;
+    .left-container {
+        border-right: 0;
         border-top: 2px solid #000;
         padding-top: 10px;
     }
