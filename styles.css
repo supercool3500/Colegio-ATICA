@@ -53,7 +53,7 @@ body {
 
 h1 {
     color: #7b002c;
-    font-size: 4.5vmin;
+    font-size: 2em;
 }
 
 h1, h2, p, li, ul, h3, h4{
@@ -61,7 +61,7 @@ h1, h2, p, li, ul, h3, h4{
 }
 
 p, li, ul {
-    font-size: 2.5vmin;
+    font-size: 1em;
 }
 
 p {
@@ -79,7 +79,7 @@ p {
     height: auto;
 }
 
-.portada {
+.portada, .tisa-img {
     margin-right: 20px;
 }
 
@@ -161,12 +161,12 @@ p {
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
 }
 
-.left-container, .materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu, .container-info, .container-form, .materias .materias-info, .punto-de-fuga-2021, .punto-de-fuga-2022, .info, .parlamento-title, .parlamento-info-p  {
+.left-container, .materias-info .ciclo-basico ul li ul.submenu, .materias-info .ciclo-orientado ul li ul.submenu, .container-info, .container-form, .materias .materias-info, .punto-de-fuga-2021, .punto-de-fuga-2022, .info, .parlamento-title, .parlamento-info-p {
     display: flex;
     flex-direction: column;
 }
 
-.left-container {
+.left-container, .tisa-img {
     border-right: 2px solid #000;
 }
 
@@ -190,7 +190,7 @@ p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.materias, .ediciones-disponibles, .main-content, .galeria, .parlamento-info, .parlamento-galeria {
+.materias, .ediciones-disponibles, .main-content, .galeria, .parlamento-info, .parlamento-galeria, .tisa-container {
     display: flex;
     flex-direction: row;
 }
@@ -207,6 +207,16 @@ p {
 
 .container-info button {
     cursor: pointer;
+}
+
+.tisa-img {
+    padding-right: 20px;
+}
+
+.tisa-img img {
+    width: 240px;
+    height: 320px;
+    
 }
 
 .container-form {
@@ -470,7 +480,7 @@ p {
 .imageDescription h2 {
     box-sizing: border-box;
     bottom: 0;
-    font-size: 4vmin;
+    font-size: 1.5em;
 }
 
 .imageDescription p, .imageDescription h2 {
@@ -649,7 +659,7 @@ p {
 }
 
 @media (max-width: 800px) {
-    .descripcion, .foot-nav ul, .ediciones-disponibles, .main-content, .parlamento-info {
+    .descripcion, .foot-nav ul, .ediciones-disponibles, .main-content, .parlamento-info, .tisa-container {
       flex-direction: column;
     }
     
@@ -671,9 +681,13 @@ p {
         display: block;
         margin: 0 auto;
         margin-bottom: 10px;
-        width: 90vw;
+        width: 100%;
         height: auto;
         border-radius: 30px;
+    }
+
+    .portada {
+        margin-right: 0;
     }
 
   }
@@ -686,6 +700,19 @@ p {
         border-right: 0;
         border-top: 2px solid #000;
         padding-top: 10px;
+    }
+
+    .tisa-img {
+        border-right: 0;
+        border-bottom: 2px solid #000;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+    }
+
+    .tisa-img img {
+        display: block;
+        margin: 0 auto;
     }
 
     .container-form {
