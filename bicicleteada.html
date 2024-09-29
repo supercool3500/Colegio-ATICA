@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscripciones</title>
+    <title>Bicicleteada</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/aticaLogo.ico" type="image/x-icon">
 </head>
@@ -39,6 +39,29 @@
         <div id="content">
             <h1>Bicicleteada</h1>
             <span class="line-separator"></span>
+            <div class="general-container">
+                <div class="general-img"><img src="images/genericImage.jpg" alt="TISA" srcset=""></div>
+                <div class="general-info">
+                   <p>En conmemoración del nacimiento de nuestra escuela, inaugurada el 10 de septiembre del año 2012, y en el marco del programa "Hábitos Saludables", todos los años realizamos nuestra bicicleteada.</p>
+                    <br>
+                    <p>Este evento, considerado de interés municipal, consiste en un recorrido de 10 km por diversos puntos de encuentro, partiendo desde la institución junto a diversas familias, estudiantes y docentes. Cada año, la comunidad escolar se une con entusiasmo, transformando la bicicleteada en una verdadera celebración colectiva.</p>
+                    <br>
+                    <p>El objetivo de este evento, además de celebrar nuestro aniversario, es promover hábitos saludables, fomentando la actividad física y el bienestar en un entorno recreativo y amigable. Asimismo, la bicicleteada se ha consolidado como una oportunidad para fortalecer los lazos entre las familias, los estudiantes y el personal docente, ofreciendo un espacio donde se destaca la importancia del compromiso compartido en la construcción de una comunidad educativa saludable y activa.</p>
+                </div>
+            </div>
+            <h2 class="galeria-title" style="margin-top: 26px;">Galería</h2>
+            <span class="line-separator"></span>
+            <div class="gallery">
+                <img src="images/parlamento-galeria-01.png" alt="Descripción 1" class="gallery-item">
+                <img src="images/parlamento-galeria-02.png" alt="Descripción 2" class="gallery-item">
+                <img src="images/parlamento-galeria-03.png" alt="Descripción 3" class="gallery-item">
+                <!-- Agrega más imágenes aquí -->
+            </div>
+        
+            <div id="lightbox" class="lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
+            </div>
         </div>
         <div id="foot">
             <h2 style="margin-bottom: 5px; margin-left: 26px; padding-top: 8px;">Redes Sociales</h2>
@@ -55,6 +78,7 @@
                 </ul>
             </div>
         </div>
+        </div>
         <div id="foot-credits">
             <hr class="linea-negra">
             <p style="margin-top: 26px; text-align: center;">Isabel La Católica 735 | Río Cuarto | Córdoba | Argentina</p>
@@ -63,5 +87,28 @@
             <p style="text-align: center;">©2024 | Comunidad Educativa ATICA | All rights reserved.</p>
         </div>
     <script src="app.js"></script>
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                lightboxImg.src = item.src;
+            });
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+        </script>
 </body>
 </html>
