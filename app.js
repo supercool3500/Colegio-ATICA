@@ -39,7 +39,7 @@ function closeMenu(subMenu) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const menuItems = document.querySelectorAll('.main-nav li, .materias-info li');
+    const menuItems = document.querySelectorAll('.navbar li, .materias-info li');
     menuItems.forEach(item => {
         if (item.querySelector('.submenu')) {
             item.addEventListener('click', toggleMenu);
