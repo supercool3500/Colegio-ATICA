@@ -514,6 +514,10 @@ p {
     opacity: 1;
 }
 
+.navbar {
+    border-bottom: 5px solid #7b002c !important;
+}
+
 .descripcion {
     flex: 1;
     display: inline-table;
