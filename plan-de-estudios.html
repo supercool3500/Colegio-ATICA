@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de Estudios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/aticaLogo.ico" type="image/x-icon">
@@ -11,8 +12,8 @@
 <body>
     <div id="head">
         <header id="theme-header">
-            <img id="logo" src="images/aticaLogo.png" alt="aticaLogo">
-            <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+            <img id="logo" src="images/aticaLogo.png" alt="aticaLogo" class="animate__animated" data-animation="animate__fadeInDown">
+            <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body animate__animated" data-animation="animate__fadeInDown" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         <img src="images/aticaLogo.ico" alt="Bootstrap" width="30" height="24">
@@ -40,7 +41,7 @@
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="parlamento-estudiantil.html">Parlamento Estudiantil</a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="feria-de-ciencias.html">Feria de Ciencias</a></li>
+                          <li><a class="dropdown-item" href="expo-rural.html">Exposicion Rural</a></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="prensa-difusion.html">Prensa y Difusión</a></li>
                         </ul>
@@ -70,9 +71,13 @@
         </header>
         </div>
         <div id="content">
+          <div class="plan-estudios-container">
+            <div class="plan-estudios-initial-image animate__animated" data-animation="animate__fadeInLeft">
+              <img src="images/genericImage.jpg" alt="" srcset="">
+            </div>
             <div class="plan">
-                <h1>Plan de Estudios</h1>
-                <div class="ciclo-basico-2">
+                <h1 class="animate__animated" data-animation="animate__fadeInUp">Plan de Estudios</h1>
+                <div class="ciclo-basico-2 animate__animated" data-animation="animate__fadeInRight">
                     <span class="line-separator"></span>
                     <h3>Estructura del Ciclo Básico</h3>
                     <p>El ciclo básico abarca los primeros tres años de educación secundaria, proporcionando una base sólida en diversas disciplinas. En él, se proporcionan a los alumnos las primeras enseñanzas que los iniciarán en el mundo de la informática, para profundizar sus conocimientos en el ciclo orientado.</p>
@@ -83,7 +88,7 @@
                         <li><strong>Informática Básica:</strong> Fundamentos de informática y uso de software básico, incluyendo introducción a la programación con Scratch.</li>
                     </ul>
                 </div>
-                <div class="ciclo-orientado-2">
+                <div class="ciclo-orientado-2 animate__animated" data-animation="animate__fadeInRight" data-animation-delay="200">
                     <span class="line-separator"></span>
                     <h3>Estructura del Ciclo Orientado</h3>
                     <p>El ciclo orientado se enfoca en la especialización en informática, abarcando los últimos tres años de educación secundaria.</p>
@@ -94,17 +99,38 @@
                         <li><strong>Base de Datos:</strong> Diseño, implementación y gestión de bases de datos.</li>
                     </ul>
                     <span class="line-separator"></span>
-                    <h3>Ventajas de la Orientación Informática</h3>
-                    <p>Elegir una orientación informática brinda a los estudiantes una preparación excelente para carreras tecnológicas, desarrollando habilidades críticas y capacidad de adaptación. Además, ofrecemos oportunidades adicionales como proyectos prácticos, participación en competiciones y colaboración con la industria tecnológica.</p>
-                </div>
+                    <div class="ventajas animate__animated" data-animation="animate__fadeInRight" data-animation-delay="400">
+                      <h3>Ventajas de la Orientación Informática</h3>
+                      <p>Elegir una orientación informática brinda a los estudiantes una preparación excelente para carreras tecnológicas, desarrollando habilidades críticas y capacidad de adaptación. Además, ofrecemos oportunidades adicionales como proyectos prácticos, participación en competiciones y colaboración con la industria tecnológica.</p>
+                    </div>
+                  </div>
             </div>
+          </div>
+          <hr class="linea-negra">
+          <div class="actividades-destacadas">
+            <h1 class="animate__animated" data-animation="animate__fadeInUp">Tecnología y Creatividad: Lo que Hacemos</h1>
+            <span class="line-separator"></span>
+            <div class="robotica animate__animated" data-animation="animate__backInRight">
+              <img src="images/genericImage.jpg" alt="Robótica con Arduino">
+              <h2>Robótica con Arduino</h2>
+            </div>
+            <span class="line-separator"></span>
+            <div class="programacion animate__animated" data-animation="animate__backInLeft">
+              <h2>Programación en PASCAL y Pseudocódigo</h2>
+              <img src="images/genericImage.jpg" alt="Programación">
+            </div>
+            <span class="line-separator"></span>
+            <div class="desarrollo-web animate__animated" data-animation="animate__backInRight">
+              <img src="images/genericImage.jpg" alt="Desarrollo Web">
+              <h2>Desarrollo Web</h2>
+            </div>
+            <span class="line-separator"></span>
+            <div class="revista-punto-de-fuga animate__animated" data-animation="animate__backInLeft">
+              <h2>Revista Institucional "Punto de Fuga"</h2>
+              <img src="images/genericImage.jpg" alt="Revista Punto de Fuga">
+            </div>
+          </div>
         </div>
-    <!--<div class="construccion">
-        <h1 style="text-align: center;">EN CONSTRUCCIÓN</h1>
-        <h3 style="text-align: center;">Vuelva pronto :)</h3>
-        <img src="images/wip.png" alt="work-in-progress" style="display: block; margin: 0 auto;">
-    </div>
-    -->
     <div id="foot">
         <h2 style="margin-bottom: 5px; margin-left: 26px; padding-top: 8px;">Redes Sociales</h2>
         <div class="foot-nav">

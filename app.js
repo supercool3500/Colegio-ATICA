@@ -1,3 +1,33 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const delay = entry.target.dataset.animationDelay || 0;
+                setTimeout(() => {
+                    entry.target.style.opacity = 1;
+                    entry.target.classList.add(entry.target.dataset.animation);
+                }, delay);
+            }
+        });
+    });
+
+    document.querySelectorAll('[data-animation]').forEach(element => {
+        observer.observe(element);
+    });
+});
+
+// Selecciona todos los elementos con la clase animate__animated
+const animatedElements = document.querySelectorAll('.animate__animated');
+
+// Añade un event listener a cada elemento para detectar cuando termine la animación
+animatedElements.forEach((element) => {
+    element.addEventListener('animationend', () => {
+        // Remueve la clase de animación cuando termine
+        element.classList.remove('animate__animated');
+    });
+});
+
+
 let currentOpenSubMenu = null;
 
 function cambiarImagen() {

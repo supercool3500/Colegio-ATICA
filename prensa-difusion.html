@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prensa y Difusión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/aticaLogo.ico" type="image/x-icon">
@@ -11,8 +12,8 @@
 <body>
     <div id="head">
         <header id="theme-header">
-            <img id="logo" src="images/aticaLogo.png" alt="aticaLogo">
-            <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+            <img id="logo" src="images/aticaLogo.png" alt="aticaLogo" class="animate__animated" data-animation="animate__fadeInDown">
+            <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body animate__animated" data-animation="animate__fadeInDown" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         <img src="images/aticaLogo.ico" alt="Bootstrap" width="30" height="24">
@@ -40,7 +41,7 @@
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="parlamento-estudiantil.html">Parlamento Estudiantil</a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="feria-de-ciencias.html">Feria de Ciencias</a></li>
+                          <li><a class="dropdown-item" href="expo-rural.html">Exposicion Rural</a></li>
                         </ul>
                       </li>
                       <li class="nav-item">
@@ -68,24 +69,26 @@
         </header>
         </div>
         <div id="content">
-            <h1>Prensa y Difusión</h1>
-            <span class="line-separator"></span>
-            <div class="general-container">
+          <div class="title animate__animated" data-animation="animate__slideInLeft">
+              <h1>Prensa y Difusión</h1>
+              <span class="line-separator"></span>
+            </div>
+            <div class="general-container animate__animated" data-animation="animate__slideInRight">
               <div class="general-img"><img src="images/genericImage.jpg" alt="TISA" srcset=""></div>
               <div class="general-info">
-                  <p>Más conocido institucionalmente por sus siglas "TISA", es un evento emblemático de la comunidad, en el que los estudiantes tienen un lugar para compartir todo lo trabajado durante el año, con la idea de poder transmitir todos los conocimientos adquiridos con los familiares, amigos y vecinos que concurren.</p>
+                  <p>Este proyecto permite a un grupo de estudiantes tener una primera experiencia en el manejo de redes sociales, producción de comunicaciones y cobertura de eventos institucionales y extrainstitucionales. A lo largo del año, los alumnos aplican conocimientos teóricos y prácticos adquiridos en las materias de nuestra especialidad, como herramientas de edición, diseño gráfico, redacción periodística y estrategias de comunicación digital.</p>
                   <br>
-                  <p>El "TISA" no solo es una plataforma para la exposición de trabajos, sino que también representa un espacio de crecimiento personal y académico para los estudiantes. A lo largo del año, los jóvenes trabajan arduamente en proyectos que reflejan su creatividad, innovación y conocimientos en diversas áreas como la ciencia, la tecnología, el arte y la cultura. Este evento anual se ha convertido en una tradición que no solo permite mostrar los logros individuales, sino que también fortalece el sentido de pertenencia a la comunidad escolar.</p>
+                  <p>A través de esta experiencia, se desarrollan competencias como el trabajo en equipo, la responsabilidad en el manejo de la información y el uso ético de los medios de comunicación. También fomenta la creatividad y la innovación, ofreciendo un espacio donde los estudiantes pueden expresarse y explorar nuevos formatos de comunicación.</p>
                   <br>
-                  <p>Los estudiantes de primer a sexto año exhiben una amplia gama de proyectos que han desarrollado en distintas asignaturas. Estos trabajos no solo abarcan disciplinas como las ciencias exactas y naturales, sino también expresiones artísticas que incluyen la actuación, la fotografía, la música y la danza, así como proyectos tecnológicos como el diseño de programas informáticos innovadores.</p>
+                  <p>El objetivo del proyecto es promover la democracia y el desarrollo social, permitiendo que las personas de nuestra comunidad estén informadas, educadas y conectadas con su entorno.</p>
               </div>
           </div>
-          <h2 class="galeria-title" style="margin-top: 26px;">Galería</h2>
+          <h2 class="galeria-title animate__animated" data-animation="animate__fadeInUp" style="margin-top: 26px;">Galería</h2>
           <span class="line-separator"></span>
           <div class="gallery">
-              <img src="images/parlamento-galeria-01.png" alt="Descripción 1" class="gallery-item">
-              <img src="images/parlamento-galeria-02.png" alt="Descripción 2" class="gallery-item">
-              <img src="images/parlamento-galeria-03.png" alt="Descripción 3" class="gallery-item">
+              <img src="images/parlamento-galeria-01.png" alt="Descripción 1" class="gallery-item animate__animated" data-animation="animate__fadeInUp" data-animation-delay="200">
+              <img src="images/parlamento-galeria-02.png" alt="Descripción 2" class="gallery-item animate__animated" data-animation="animate__fadeInUp" data-animation-delay="400">
+              <img src="images/parlamento-galeria-03.png" alt="Descripción 3" class="gallery-item animate__animated" data-animation="animate__fadeInUp" data-animation-delay="600">
               <!-- Agrega más imágenes aquí -->
           </div>
       

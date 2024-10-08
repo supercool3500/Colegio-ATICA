@@ -68,6 +68,10 @@ p {
     text-align: justify;
 }
 
+.animate__animated {
+    opacity: 0;
+}
+
 .info {
     width: 100vw;
     border-left: 3px solid #af0e47;
@@ -77,6 +81,18 @@ p {
 .portada img {
     width: 20vw;
     height: auto;
+}
+
+.plan-estudios-initial-image {
+    border-right: 3px solid #000;
+    margin-right: 20px;
+}
+
+.plan-estudios-initial-image img{
+    width: 300px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
 }
 
 .general-img {
@@ -190,9 +206,22 @@ p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.materias, .ediciones-disponibles, .main-content, .galeria, .parlamento-info, .parlamento-galeria, .general-container {
+.materias, .ediciones-disponibles, .main-content, .galeria, .parlamento-info, .parlamento-galeria, .general-container, .plan-estudios-container, .robotica, .programacion, .desarrollo-web, .revista-punto-de-fuga  {
     display: flex;
     flex-direction: row;
+}
+
+.robotica, .programacion, .desarrollo-web, .revista-punto-de-fuga {
+    margin-top: 50px;
+}
+
+.robotica h2, .programacion h2, .desarrollo-web h2, .revista-punto-de-fuga h2{
+    margin: 0 15px 0 15px;
+}
+
+.robotica img, .programacion img, .desarrollo-web img, .revista-punto-de-fuga img {
+    width: 40%;
+    height: 300px;
 }
 
 .container {
@@ -432,9 +461,15 @@ p {
     float: left;
 }
 
-.materias .materias-info, .parlamento-title {
+.materias .materias-info, .parlamento-title, .plan-estudios-initial-image  {
     flex: 1;
 }
+
+.plan {
+    flex: 2;
+}
+
+
 
 .ciclo-basico, .ciclo-orientado  {
     margin-bottom: 20px;
@@ -536,7 +571,7 @@ p {
     float:none;
 }
 
-.descripcion h2, .galeria-title, .descripcion h3 , .punto-de-fuga-2021 h3, .punto-de-fuga-2022 h3, h4 {
+.descripcion h2, .galeria-title, .descripcion h3 , .punto-de-fuga-2021 h3, .punto-de-fuga-2022 h3, h4, .robotica h2, .programacion h2, .desarrollo-web h2, .revista-punto-de-fuga h2 {
     color:#7b002c !important;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) !important;
    }
@@ -593,7 +628,10 @@ p {
 }
 
 @media (max-width: 800px) {
-    .descripcion, .foot-nav ul, .ediciones-disponibles, .main-content, .parlamento-info, .general-container {
+    #content{
+        margin-left: 20px;
+    }
+    .descripcion, .foot-nav ul, .ediciones-disponibles, .main-content, .parlamento-info, .general-container, .plan-estudios-container {
       flex-direction: column;
     }
 
@@ -624,11 +662,11 @@ p {
         border-radius: 30px;
     }
 
-    .portada {
+    .portada, .plan-estudios-initial-image {
         margin-right: 0;
     }
 
-    .general-img {
+    .general-img, .plan-estudios-initial-image {
         border-right: 0;
         border-bottom: 2px solid #000;
         padding-bottom: 15px;
@@ -716,4 +754,10 @@ p {
     margin-bottom: -1vw;
     height: auto;
     width: 20vw;
+}
+
+@media (max-width: 400px) {
+    .plan-estudios-initial-image img {
+        width: 80vw;
+    }
 }
