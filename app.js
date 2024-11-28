@@ -30,18 +30,6 @@ animatedElements.forEach((element) => {
 
 let currentOpenSubMenu = null;
 
-function cambiarImagen() {
-    const imagen = document.getElementById("image");
-    if (window.innerWidth <= 800) {
-      imagen.src = "images/punto-de-fuga/puntodefuga.png";
-    } else {
-      imagen.src = "images/punto-de-fuga/punto-de-fuga-portada.jpeg";
-    }
-  }
-
-window.onload = cambiarImagen;
-window.addEventListener('resize', cambiarImagen);
-
 function toggleMenu(event) {
     event.stopPropagation();
     const target = event.currentTarget;
@@ -136,56 +124,3 @@ window.onresize = function(event) {
     reloadSlider();
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    const imageContainer = document.getElementById('gallery');
-    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
-
-    let imagePrefix; 
-    switch (currentPage) { 
-        case 'bicicleteada': 
-            imagePrefix = 'bicicleteada-galeria-'; 
-            break; 
-        case 'expo-rural': 
-            imagePrefix = 'expo-'; 
-            break; 
-        case 'lectura-por-placer': 
-            imagePrefix = 'lpp-galeria-'; 
-            break; 
-        case 'parlamento-estudiantil': 
-            imagePrefix = 'parlamento-galeria-'; 
-            break; 
-        case 'prensa-difusion': 
-            imagePrefix = 'prensa-galeria-'; 
-            break; 
-        case 'tisa': 
-            imagePrefix = 'tisa-galeria-'; 
-            break;
-        // Añade más casos según sea necesario 
-        default: 
-            imagePrefix = 'default-'; // Un prefijo por defecto si es necesario
-    }
-
-    const imageDirectory = `images/${currentPage}/`;
-    let imageIndex = 1; // Comienza desde 1
-    let imageExists = true;
-
-    while (imageExists) {
-        const imagePath = `${imageDirectory}${imagePrefix}${imageIndex}.jpg`;
-        const img = document.createElement('img');
-        img.src = imagePath;
-        console.log(imagePath);
-        img.classList.add('gallery-item', 'animate__animated', 'animate__fadeIn');
-
-        img.onerror = function() {
-            imageExists = false;
-            img.remove();
-        };
-
-        img.onload = function() {
-            imageContainer.appendChild(img);
-        };
-
-        imageContainer.appendChild(img);
-        imageIndex++;
-    }
-});

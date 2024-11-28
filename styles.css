@@ -93,6 +93,7 @@ p {
     height: 500px;
     display: block;
     margin: 0 auto;
+    object-fit: cover;
 }
 
 .general-img {
@@ -112,13 +113,16 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .gallery-item {
-    height: 22vw;
-    width: 20vw;
+    width: 100%; /* Toma el 100% del ancho de su contenedor */
+    max-width: 300px; /* Ancho máximo */
+    height: 300px;
     cursor: pointer;
     transition: transform 0.2s;
+    object-fit: cover;
 }
 
 .gallery-item:hover {
@@ -219,9 +223,10 @@ p {
     margin: 0 15px 0 15px;
 }
 
-.robotica img, .programacion img, .desarrollo-web img, .revista-punto-de-fuga img {
-    width: 40%;
+.actividades-destacadas img {
+    width: auto;
     height: 300px;
+    object-fit: cover;
 }
 
 .container {
@@ -249,7 +254,7 @@ p {
 .general-img img {
     width: 240px;
     height: 320px;
-    
+    object-fit: cover;
 }
 
 .container-form {
@@ -571,7 +576,7 @@ p {
     float:none;
 }
 
-.descripcion h2, .galeria-title, .descripcion h3 , .punto-de-fuga-2021 h3, .punto-de-fuga-2022 h3, h4, .robotica h2, .programacion h2, .desarrollo-web h2, .revista-punto-de-fuga h2 {
+.descripcion h2, .galeria-title, .descripcion h3 , .punto-de-fuga-2021 h3, .punto-de-fuga-2022 h3, .punto-de-fuga-2023 h3, h4, .robotica h2, .programacion h2, .desarrollo-web h2, .revista-punto-de-fuga h2 {
     color:#7b002c !important;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) !important;
    }
@@ -647,6 +652,7 @@ p {
 
     .parlamento-title {
         margin-bottom: 26px;
+        width: 90vw;
     }
 
     .parlamento-info-p {
